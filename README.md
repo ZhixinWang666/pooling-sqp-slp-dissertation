@@ -42,3 +42,30 @@ subproblem-solver control experiment.
   subproblem-solver control experiment. This version uses `quadprog`
   instead of `fmincon` to solve the quadratic subproblems. It is not one
   of the four main implementations compared in the dissertation.
+
+  ### `Validation/`
+
+This folder contains the programs used for the implementation validation
+described in Section 4.5 of the dissertation.
+
+- `Simpleproblem_Validation/` contains the Exact-Hessian SQP, QN-SQP and
+  diagnostic pure-SLP programs for the small two-variable validation
+  problem.
+- `Bental5_Validation/` contains the programs, model and starting points
+  used to inspect the filter, trust-region and restoration mechanisms on
+  selected Bental5 runs.
+
+The Bental5 validation uses a diagnostic q-formulation model rather than
+the flow--concentration formulation used for Bental5 in the main
+numerical experiments. This does not affect the validation because its
+purpose is to inspect the operation of the algorithmic components, not
+to compare numerical performance on the final benchmark formulation.
+
+### `Diagnostics/`
+
+This folder contains the three diagnostic scripts used in the
+subproblem-solver investigation reported in Section 6.2. The scripts
+compare the first QP solutions, multiplier information and subsequent
+outer iteration paths of the `fmincon` and `quadprog` QN-SQP versions.
+The Foulds3 model and saved starting points required by these scripts are
+included in the same folder.

@@ -1,0 +1,87 @@
+set I := c1 c2 c3 c4 c5;
+set J := o1 o2;
+set K := p1 p2 p3 p4;
+set Q := q1 q2 q3 q4 q5 q6;
+
+param raw_lo :=
+c1 0
+c2 0
+c3 0
+c4 0
+c5 0
+;
+
+param raw_up :=
+c1 75
+c2 75
+c3 75
+c4 75
+c5 75
+;
+
+param raw_price :=
+c1 7
+c2 3
+c3 2
+c4 10
+c5 5
+;
+
+param prod_lo :=
+p1 0
+p2 0
+p3 0
+p4 0
+;
+
+param prod_up :=
+p1 10
+p2 25
+p3 30
+p4 10
+;
+
+param prod_price :=
+p1 16
+p2 25
+p3 15
+p4 10
+;
+
+param poolcap :=
+o1 75
+o2 75
+;
+
+param poolconn : o1 o2 :=
+c1   1    0
+c2   1    0
+c3   0    1
+c4   0    1
+c5   0    1
+;
+
+param maxpoolprod : p1 p2 p3 p4 :=
+o1   10   25   30   10
+o2   30   10   10   25
+;
+
+param poolprodconn : p1 p2 p3 p4 :=
+o1   1    1    1    1
+o2   1    1    1    1
+;
+
+param rawcomp : q1    q2    q3    q4    q5    q6 :=
+c1                1     6     4   0.5     5     9
+c2                4     1     3     2     4     4
+c3                4   5.5     3   0.9     7    10
+c4                3     3     3     1     3     4
+c5                1   2.7     4   1.6     3     7
+;
+
+param prodcomp_ub : q1    q2    q3    q4    q5    q6 :=
+p1                3     3   3.25  0.75     6     5
+p2                4   2.5    3.5   1.5     7     6
+p3              1.5   5.5    3.9   0.8     7     6
+p4                3     4      4   1.8     8     6
+;

@@ -43,7 +43,7 @@ subproblem-solver control experiment.
   instead of `fmincon` to solve the quadratic subproblems. It is not one
   of the four main implementations compared in the dissertation.
 
-  ### `Validation/`
+### `Validation/`
 
 This folder contains the programs used for the implementation validation
 described in Section 4.5 of the dissertation.
@@ -69,3 +69,23 @@ compare the first QP solutions, multiplier information and subsequent
 outer iteration paths of the `fmincon` and `quadprog` QN-SQP versions.
 The Foulds3 model and saved starting points required by these scripts are
 included in the same folder.
+
+
+### `Results/`
+
+The implementation programs save the result of each experiment as a
+timestamped `.mat` file. For clarity, the copies provided here were
+renamed by benchmark problem and organised into the `Exact-SQP`,
+`QN-SQP`, `SLP-C` and `SLP-W` folders. Only the filenames were changed;
+the stored results were not modified.
+
+The original Exact-SQP runs on Foulds3--Foulds5 were computationally
+expensive, and `.mat` output was not enabled when they were first run.
+The dissertation therefore used the results retained from the MATLAB
+command-window output, which are provided in
+`Exact_SQP_foulds345.docx`. These experiments were later rerun and the
+resulting `.mat` files are included in the `Exact-SQP` folder. The
+numerical results agree with the original records, apart from small
+differences in elapsed time caused by normal variation in system load
+between separate runs. This does not affect the conclusions of the
+dissertation.

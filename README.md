@@ -89,3 +89,11 @@ numerical results agree with the original records, apart from small
 differences in elapsed time caused by normal variation in system load
 between separate runs. This does not affect the conclusions of the
 dissertation.
+
+
+
+
+（Result files record the original names of the starting-point files,
+which may differ from the filenames in `starting_points/`. The files were
+later renamed consistently for clarity, but the stored starting-point
+data are identical.）

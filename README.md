@@ -17,3 +17,28 @@ This folder contains one `.mat` file for each of the eleven benchmark
 problems. Each file stores the 50 starting points used in the numerical
 experiments. For each problem, the same saved starting points are used
 by all four implementations.
+
+### `code/`
+
+This folder contains the four main MATLAB implementations, the
+starting-point generators and the additional version used in the
+subproblem-solver control experiment.
+
+- `implementations/` contains the four implementations compared in the
+  main numerical experiments:
+
+  - `Final_Test_SQP_old.m` is the Exact-Hessian SQP implementation.
+  - `Final_Test_SQP_QN.m` is the QN-SQP implementation.
+  - `Final_Test_SLP_quad.m` is the cold-started SLP implementation,
+    denoted by SLP-C in the dissertation.
+  - `Final_Test_SLP_quadwarm.m` is the warm-started SLP implementation,
+    denoted by SLP-W in the dissertation.
+
+- `starting_point_generators/` contains the eleven MATLAB functions used
+  to generate the starting points for the eleven benchmark problems.
+
+- `QN-SQP_quadprog_control/` contains
+  `Final_Test_SQP_QN_quad.m`, the additional QN-SQP version used in the
+  subproblem-solver control experiment. This version uses `quadprog`
+  instead of `fmincon` to solve the quadratic subproblems. It is not one
+  of the four main implementations compared in the dissertation.

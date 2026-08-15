@@ -79,21 +79,21 @@ renamed by benchmark problem and organised into the `Exact-SQP`,
 `QN-SQP`, `SLP-C` and `SLP-W` folders. Only the filenames were changed;
 the stored results were not modified.
 
-The original Exact-SQP runs on Foulds3--Foulds5 were computationally
-expensive, and `.mat` output was not enabled when they were first run.
-The dissertation therefore used the results retained from the MATLAB
-command-window output, which are provided in
-`Exact_SQP_foulds345.docx`. These experiments were later rerun and the
+The original Exact-SQP runs for Foulds3, Foulds4 and Foulds5 took a long
+time, and the option to save `.mat` output was not enabled during the
+first runs. The dissertation therefore used the results copied from the
+MATLAB Command Window, which are provided in
+`Exact_SQP_foulds345.docx`. The experiments were later rerun, and the
 resulting `.mat` files are included in the `Exact-SQP` folder. The
-numerical results agree with the original records, apart from small
-differences in elapsed time caused by normal variation in system load
-between separate runs. This does not affect the conclusions of the
-dissertation.
+numerical results agree with the original records, while the elapsed
+times differ slightly because the runs were carried out separately
+under different system loads. These timing differences do not change
+the comparisons reported in the dissertation.
 
 
 
 
-（Result files record the original names of the starting-point files,
+Result files record the original names of the starting-point files,
 which may differ from the filenames in `starting_points/`. The files were
 later renamed consistently for clarity, but the stored starting-point
-data are identical.）
+data are identical.
